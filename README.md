@@ -13,7 +13,7 @@ The threading model is provided by Heng Li's kthread library, see [klib](https:/
 To compile:
 
 ```
-gcc -pedantic -Wall -Wextra -std=c11 -O3 -c -o kthread.o kthread.c
+gcc -pedantic -Wall -Wextra -O3 -c -o kthread.o kthread.c
 gcc -pedantic -Wall -Wextra -std=c11 -O3 -o bigbff bigbff.c kthread.o -lm -lpthread
 ```
 
