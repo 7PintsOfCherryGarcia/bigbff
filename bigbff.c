@@ -30,7 +30,7 @@ SOFTWARE.
 #include <time.h>
 
 #include "binaryfusefilter.h"
-#include "kthread.h"
+#include "klib/kthread.h"
 
 #define SIZE  10000000000UL //10 billion keys
 #define MSIZE 250000000U    //Max subfilter size
@@ -173,11 +173,11 @@ int main(int argc, char *argv[])
 
     //Change half the keys
     fprintf(stderr, "Creating queries\n");
-    for (uint64_t i = 0; i < SIZE; i++)
+    for (uint64_t i = 0; i < 5000000; i++)
         keys[i] = (i & 1U) ? keys[i] : binary_fuse_rng_splitmix64(&rng_counter);
     fprintf(stderr, "Querying\n");
-    uint64_t found = bffc32_nquery(filterc, keys, SIZE);
-    fprintf(stderr, "Found %lu queries\n", found);
+    uint64_t found = bffc32_nquery(filterc, keys, 5000000);
+    fprintf(stderr, "Found %lu queries out of 5000000\n", found);
     exit:
         if (keys) free(keys);
         return 0;
