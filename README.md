@@ -4,7 +4,7 @@ An implementation of building [binary fuse filters](https://github.com/FastFilte
 This is just a small example on how to build binary fuse filters on large datasets (> $2^{32}$ entries)
 
 It relies on spliting the input keys on equally sized "chunks" and building a binary fuse filter with each chunk.
-Filter building happens in-memory with no writes or reads to disk. Thus, it requires a very large amount of system ram.
+Filter building happens in-memory with no writes or reads to disk. Thus, it requires a very large amount of system ram ~400GB.
 
 This example constructs a "chunked" filter from 10 billion keys. The user provides how many chunks the dataset must be divided by and the number of threads to be used. Chunks have a maximum size of 250 million keys.
 
