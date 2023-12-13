@@ -17,10 +17,12 @@ gcc -pedantic -Wall -Wextra -O3 -c -o kthread.o kthread.c
 gcc -pedantic -Wall -Wextra -std=c11 -O3 -o bigbff bigbff.c kthread.o -lm -lpthread
 ```
 
-Code in this repo uses 32 bit fingerprints you can use 16 bit and 8 bit fingerprints by chanign to the types:
+Code in this repo uses 32 bit fingerprints you can use 16 bit and 8 bit fingerprints by changing to the types:
 
 ```
 bffc16_t
 //or
 bffc8_t
 ```
+
+Although I haven't implemented functions to handle these types.
