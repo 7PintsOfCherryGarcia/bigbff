@@ -14,7 +14,7 @@ To compile:
 
 ```
 gcc -pedantic -Wall -Wextra -std=c11 -O3 -c -o kthread.o kthread.c
-gcc -pedantic -Wall -Wextra -std=c11 -O3 -o testbff testbff.c kthread.o -lm -lpthread
+gcc -pedantic -Wall -Wextra -std=c11 -O3 -o bigbff bigbff.c kthread.o -lm -lpthread
 ```
 
 Code in this repo uses 32 bit fingerprints you can use 16 bit and 8 bit fingerprints by chanign to the types:
