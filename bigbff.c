@@ -30,7 +30,7 @@ SOFTWARE.
 #include <time.h>
 
 #include "binaryfusefilter.h"
-#include "klib/kthread.h"
+#include "kthread.h"
 
 #define SIZE  10000000000UL //10 billion keys
 #define MSIZE 250000000U    //Max subfilter size
